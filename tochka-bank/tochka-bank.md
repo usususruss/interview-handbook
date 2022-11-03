@@ -378,7 +378,7 @@ type Type2 = {
 fetch('/some-api')
     .then((response: Type1 | Type2) => {
         
-        if (isType1()) { // here is Type1
+        if (isType1(response)) { // here is Type1
             console.log(response.foo); // ok    
         }
         
